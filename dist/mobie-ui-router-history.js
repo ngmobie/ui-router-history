@@ -58,12 +58,7 @@ function $MbHistoryProvider () {
 
 function SidenavBackButtonDirective ($mbHistory, MbComponent) {
 	return {
-		require: '?^mbSidenav',
-		link: function (scope, element, attrs, mbSidenav) {
-			if(!mbSidenav) {
-				return;
-			}
-
+		link: function (scope, element, attrs) {
 			var component = new MbComponent(element);
 
 			scope.$watch(function () {
@@ -94,5 +89,5 @@ angular.module('mobie-ui-router-history', [
 	'mobie',
 	'ui-router-history',
 ])
-.directive('mbSidenavBackButton', SidenavBackButtonDirective)
+.directive('mbBackButton', SidenavBackButtonDirective)
 .provider('$mbHistory', $MbHistoryProvider);

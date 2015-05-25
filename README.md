@@ -14,12 +14,10 @@ bower install --save mobie-ui-router-history
 When the history has any last state on cache, the class 'mb-visible' will be added to the mb-sidenav-back-button element where the directive belong. And the state will be rolled back if you click that element, but, you can avoid that preventing the event `$mbButtonBackPressed`.
 
 ```html
-<div mb-sidenav data-component-id="left">
-	<div class="bar">
-		<div mb-sidenav-back-button>
-			<i class="fa fa-angle-left"></i>
-			<!-- get away from ng-transclude -->
-		</div>
+<div class="bar">
+	<div mb-sidenav-back-button>
+		<i class="fa fa-angle-left"></i>
+		<!-- get away from ng-transclude -->
 	</div>
 </div>
 ```

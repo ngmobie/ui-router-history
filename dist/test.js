@@ -28,11 +28,9 @@ describe('mobie-ui-router-history', function () {
 
 	it('should render a back button', function () {
 		var tpl = '<body><div>' +
-			'<div mb-sidenav data-component-id="left">' +
-				'<div class="bar">' +
-					'<div mb-sidenav-back-button>' +
-						'<a>{{ mytext }}</a>' +
-					'</div>' +
+			'<div class="bar">' +
+				'<div mb-back-button>' +
+					'<a>{{ mytext }}</a>' +
 				'</div>' +
 			'</div>' +
 			'<div ui-view></div>' +
@@ -43,7 +41,7 @@ describe('mobie-ui-router-history', function () {
 
 		$rootScope.$digest();
 
-		var backButtonEl = angular.element(el[0].querySelector('[mb-sidenav-back-button]'));
+		var backButtonEl = angular.element(el[0].querySelector('[mb-back-button]'));
 		assert.ok(backButtonEl.hasClass('mb-hidden'));
 
 		$state.go('state1');
