@@ -5,6 +5,7 @@ function $MbHistoryProvider () {
 		autoBackOnClick: true
 	};
 
+	$MbHistoryFactory.$inject = ['$stateHistory', '$q'];
 	function $MbHistoryFactory ($stateHistory, $q) {
 		var $mbHistory = {};
 
@@ -56,7 +57,8 @@ function $MbHistoryProvider () {
 	}
 }
 
-function SidenavBackButtonDirective ($mbHistory, MbComponent) {
+BackButtonDirective.$inject = ['$mbHistory', 'MbComponent'];
+function BackButtonDirective ($mbHistory, MbComponent) {
 	return {
 		link: function (scope, element, attrs) {
 			var component = new MbComponent(element);
@@ -89,5 +91,5 @@ angular.module('mobie-ui-router-history', [
 	'mobie',
 	'ui-router-history',
 ])
-.directive('mbBackButton', SidenavBackButtonDirective)
+.directive('mbBackButton', BackButtonDirective)
 .provider('$mbHistory', $MbHistoryProvider);

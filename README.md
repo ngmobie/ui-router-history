@@ -1,6 +1,7 @@
 # mobie-ui-router-history
 
 ### Dependencies
+- [mobie](https://github.com/ngmobie/mobie)
 - [ui-router-history](https://github.com/VictorQueiroz/ui-router-history)
 - [ui-router](https://github.com/angular-ui/ui-router)
 - [AngularJS](https://github.com/angular/angular.js)
@@ -15,7 +16,7 @@ When the history has any last state on cache, the class 'mb-visible' will be add
 
 ```html
 <div class="bar">
-	<div mb-sidenav-back-button>
+	<div mb-back-button>
 		<i class="fa fa-angle-left"></i>
 		<!-- get away from ng-transclude -->
 	</div>
